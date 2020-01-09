@@ -3,6 +3,7 @@ import { Provider } from 'react-redux'
 import { configureStore, combineReducers } from '@reduxjs/toolkit'
 import { counter } from 'reducers/counter'
 import { CurrentCount } from 'components/CurrentCount'
+import { IncrementButtons } from 'components/IncrementButtons'
 
 const reducer = combineReducers({
   counter: counter.reducer
@@ -14,6 +15,7 @@ export const App = () => {
   return (
     <Provider store={store}>
       <CurrentCount />
+      <IncrementButtons />
     </Provider>
   )
 }
